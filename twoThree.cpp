@@ -1,7 +1,4 @@
-/** Chapter 2 Problem 3
- *Opens the cpp file and counts the words
- *Displays the word count
-*/
+// Chapter 2 Problem 3
 
 #include <iostream>
 #include <fstream>
@@ -9,8 +6,10 @@
 using namespace std;
 
 /*Main method
+ *Opens the cpp file and counts the words
+ *Displays the word count
  *param: none
- *return: none
+ *return: 0
  *throw: none
  */
 int main() {

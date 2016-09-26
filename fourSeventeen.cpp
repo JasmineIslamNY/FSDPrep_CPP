@@ -4,9 +4,10 @@
 #include <iostream>
 
 /*Main method
- *Dynamically create pieces of storage of the following types, using new: int, long, an array of 100 chars, an array of 100 floats. Print the addresses of these and then free the storage using delete.
+ *Dynamically create pieces of storage of the following types, using new: int, long, an array of 100 chars, an array of 100 floats. 
+ *Print the addresses of these and then free the storage using delete.
  *param: none
- *return: none
+ *return: 0
  *throw: none
  */
 

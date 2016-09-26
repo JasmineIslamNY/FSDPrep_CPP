@@ -7,20 +7,26 @@
 #include <iostream>
 using namespace std;
 
-class Announce {
+class PrintIt {
     int x;
 public:
-    Announce(int y) {
-        this->x = y;
-        cout << "Announce has been created with an int of: " << x << endl;
+    PrintIt(int x) {
+        this->x = x;
+        cout << "PrintIt has been created with an int of: " << x << endl;
     }
-    ~ Announce() {
-        cout << "Announce destructor has been called with an int of: " << x << endl;
+    ~ PrintIt() {
+        cout << "PrintIt destructor has been called with an int of: " << x << endl;
     }
 };
 
+/*Main method creates an instance of the PrintIt class with an int argument
+ *then creates a second one to show the order of creation and destruction and confirm multiple ints are handled
+ *param: none
+ *return: 0
+ *throw: none
+ */
 int main() {
     using namespace std;
-    Announce a1(5);
-    Announce b(-23);
+    PrintIt p1(5);
+    PrintIt p2(-23);
 }

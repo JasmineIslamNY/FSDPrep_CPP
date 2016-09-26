@@ -1,5 +1,5 @@
 /** Chapter 2 Problem 5
- *Change Fillvector.cpp so it prints the lines backwards from last to first.
+ *Change Fillvector.cpp (renamed to twoFive) so it prints the lines backwards from last to first.
  */
 
 #include <string>
@@ -9,8 +9,9 @@
 using namespace std;
 
 /*Main method
+ *Open twoFive.cpp and print the lines from last to first
  *param: none
- *return: none
+ *return: 0
  *throw: none
  */
 int main() {

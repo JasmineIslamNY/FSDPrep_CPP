@@ -5,17 +5,22 @@
 #include <iostream>
 using namespace std;
 
-class Announce {
+class PrintIt {
 public:
-    Announce() {
-        cout << "Announce has been created" << endl;
+    PrintIt() {
+        cout << "PrintIt has been created" << endl;
     }
-    ~ Announce() {
-        cout << "Announce destructor has been called" << endl;
+    ~ PrintIt() {
+        cout << "PrintIt destructor has been called" << endl;
     }
 };
 
+/*Main method creates an instance of the PrintIt class
+ *param: none
+ *return: 0
+ *throw: none
+ */
 int main() {
     using namespace std;
-    Announce a1;
+    PrintIt p1;
 }

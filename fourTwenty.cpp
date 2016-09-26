@@ -11,23 +11,23 @@ struct DataOnly {
     int x;
 };
 
-struct Both {
+struct DataFunc {
     int x;
     void setX(int);
     int getX();
 };
 
-struct Nothing {
+struct NoMembers {
 };
 
 /*Main method prints size of the three different structs (DataOnly, Both, Nothing)
  *param: none
- *return: none
+ *return: 0
  *throw: none
  */
 int main() {
     using namespace std;
     cout <<"Size of Data Only: " << sizeof(DataOnly) << endl;
-    cout <<"Size of Data and Functions: " << sizeof(Both) << endl;
-    cout <<"Size of No Members: " << sizeof(Nothing) << endl;
+    cout <<"Size of Data and Functions: " << sizeof(DataFunc) << endl;
+    cout <<"Size of No Members: " << sizeof(NoMembers) << endl;
 }
