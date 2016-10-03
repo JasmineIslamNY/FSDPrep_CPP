@@ -2,7 +2,7 @@
 *Create a simple class with an overloaded operator++. 
 * Try calling this operator in both pre- and postfix form and see what kind of compiler warning you get.
 *
-*ERRORS: inline
+*ERRORS: none
 */
 
 #include <iostream>
