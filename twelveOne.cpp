@@ -10,30 +10,44 @@ using namespace std;
 
 class Simple {
     int i;
-    Simple* This() {return this;}
 public:
-    Simple(int ii): i(ii) {}
-    const Simple& operator++ (Simple& s); //Parameter of overloaded post-increment operator must have type 'int' (not 'Simple &')
-    const Simple operator++ (Simple& s, int); //Overloaded 'operator++' must be a unary or binary operator (has 3 parameters)
+    Simple(int ii): i(ii) {
+        if (this->i < 2) {
+            cout << "Minimum value to start Simple is 2.  Current value automatically set to 2." << endl;
+        }}
+    int operator++ () {
+        cout << "++Simple" << endl;
+        i = i * i;
+        return i;
+    }
+    int operator++ (int) {
+        cout << "Simple++" << endl;
+        int before = i;
+        i = i * i;
+        return before;
+    }
+    void print() {
+        cout << "The current value of Simple is " << i << endl;
+    }
 };
 
-//Prefix; return incremented value
-const Simple& operator++ (Simple& s) {
-    cout << "++Simple" << endl;
-    s.i++; //'i' is a private member of 'Simple'
-    return s;
-}
-
-//Postfix; return the value before increment
-const Simple operator++ (Simple& s, int) {
-    cout << "Simple++" << endl;
-    Simple before(s.i); //'i' is a private member of 'Simple'
-    s.i++;  //'i' is a private member of 'Simple'
-    return before;
-}
 
 int main() {
-    Simple example(1);
-    example++;
-    ++example;
+    Simple example(5);
+    
+    cout << "Testing prefix form" << endl;
+    cout << "-------------------" << endl;
+    example.print();
+    int temp = example++;
+    cout << "Value returned from overloaded operator: " << temp << endl;
+    example.print();
+    cout << "\n";
+    
+    cout << "Testing postfix form" << endl;
+    cout << "-------------------" << endl;
+    example.print();
+    temp = ++example;
+    cout << "Value returned from overloaded operator: " << temp << endl;
+    example.print();
+    cout << "\n";
 }
