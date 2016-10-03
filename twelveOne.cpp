@@ -12,8 +12,9 @@ class Simple {
     int i;
 public:
     Simple(int ii): i(ii) {
-        if (this->i < 2) {
+        if (i < 2) {
             cout << "Minimum value to start Simple is 2.  Current value automatically set to 2." << endl;
+            i = 2;
         }}
     int operator++ () {
         cout << "++Simple" << endl;
@@ -33,7 +34,7 @@ public:
 
 
 int main() {
-    Simple example(5);
+    Simple example(7);
     
     cout << "Testing prefix form" << endl;
     cout << "-------------------" << endl;
