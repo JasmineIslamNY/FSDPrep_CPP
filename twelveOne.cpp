@@ -32,7 +32,6 @@ public:
     }
 };
 
-
 int main() {
     Simple example(7);
     
