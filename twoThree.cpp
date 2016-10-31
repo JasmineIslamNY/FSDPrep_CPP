@@ -21,4 +21,5 @@ int main() {
         ++nwords;
     
     cout << "Number of words = " << nwords << endl;
+    return 0;
 }

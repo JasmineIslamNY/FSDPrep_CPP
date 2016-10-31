@@ -22,9 +22,8 @@ int main() {
         v.push_back(line);
     
     // Print backwards:
-    int nlines = (int)v.size();
-    for(int i = 0; i < nlines; i++) {
-        int lineno = nlines-i-1;
-        cout << lineno << ": " << v[lineno] << endl;
+    for(int i = (int)v.size(); i > 0; ) {
+        --i;
+        cout << i << ": " << v[i] << endl;
     }
 }
